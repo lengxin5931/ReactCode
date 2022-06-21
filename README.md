@@ -44,3 +44,32 @@ ReactDOM.render(
  );
 ```
 
+#### Api
+
+```jsx
+ReactDOM.render() // 把虚拟dom生成真实dom,插入到页面容器中
+ReactDOM.render() // 参数：jsx(虚拟dom)、页面容器、回调函数：把虚拟dom生成真实dom插入到页面容器中之后立刻调用
+```
+
+
+
+#### JSX语法
+
+可以把jsx称为虚拟dom，但是不能把虚拟dom称为jsx
+
+jsx是js+html的混合语句
+
+jsx语句浏览器不支持 jsx不是合法的js语句，需要通过babel转码，转成合法的js语句
+
+jsx是React.createElement()的语法糖
+
+###### 语法规范
+
+1. class要写成classNme
+2. 只能有一个根节点
+3. 标签必须闭合
+4. label的for属性要写成htmlFor
+5. 通过{}绑定动态数据或者js表达式
+6. 自动展开数组,使用有返回值的数组方法
+7. style的值要用双花括号{{}}
+
