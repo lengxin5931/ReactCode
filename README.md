@@ -75,7 +75,7 @@ jsx是React.createElement()的语法糖
 
 #### this.setState()
 
-###### setState()的两种写法
+###### this.setState()的两种写法
 
 ```jsx
 1.this.setState({})
@@ -85,7 +85,7 @@ jsx是React.createElement()的语法糖
 })
 ```
 
-###### setState()的两个参数
+###### this.setState()的两个参数
 
 1. 修改状态
 2. 回调函数 作用：获取最新状态
