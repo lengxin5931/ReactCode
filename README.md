@@ -73,3 +73,20 @@ jsx是React.createElement()的语法糖
 6. 自动展开数组,使用有返回值的数组方法
 7. style的值要用双花括号{{}}
 
+#### this.setState()
+
+###### setState()的两种写法
+
+```jsx
+1.this.setState({})
+
+2.this.setState(()=>{
+	return{}
+})
+```
+
+###### setState()的两个参数
+
+1. 修改状态
+2. 回调函数 作用：获取最新装填
+
