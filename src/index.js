@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
-import App from "./App";
 ReactDOM.render(
-  <div className="box">
-    <App />
-  </div>,
+  <div
+    className="box"
+    style={{
+      padding: 0,
+      margin: 0,
+      listStyle: "none",
+      boxSizing: "border-box",
+    }}
+  ></div>,
   document.getElementById("root")
 );
