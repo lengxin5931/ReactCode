@@ -80,7 +80,7 @@ jsx是React.createElement()的语法糖
 1.this.setState({})
 
 2.this.setState(()=>{
-	return{}
+ return{}
 })
 ```
 
@@ -89,14 +89,14 @@ jsx是React.createElement()的语法糖
 ```jsx
 1. 修改状态
 2. 回调函数
-	作用:获取最新状态
-	触发:dom更新后触发(状态修改并且视图更新后触发)
+ 作用:获取最新状态
+ 触发:dom更新后触发(状态修改并且视图更新后触发)
 ```
 
 ##### setState()到底是同步还是异步的？
 
 ```jsx
-setState有的时候同步,有的时候异步,setState本身是同步的，但会有异步的表现形式
+setState有的时候同步, 有的时候异步, setState本身是同步的, 但会有异步的表现形式
 在合成事件和生命周期中是异步的
 在原生事件和异步中是同步的
 ```
