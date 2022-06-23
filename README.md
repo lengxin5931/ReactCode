@@ -2,55 +2,58 @@
 
 ##### 安装脚手架
 
-```markdown
+```jsx
 npm install -g create-react-app
 ```
 
 ##### 查看脚手架版本
 
-```js
-create - react - app - V;
+```jsx
+create-react-app -V
 ```
 
 ### 初始化项目
 
 ##### 创建项目
 
-```js
+```jsx
 create-react-app 项目名称
-cd 项目目录
+cd 项目目录 
 ```
 
 ##### 暴露配置项
 
-```js
+```jsx
 npm run eject
 ```
 
-##### 降级成 17 版本
+##### 降级成17版本
 
-```js
+```jsx
 npm install react@17 react-dom@17
 ```
 
-##### 修改 index.js 文件
+##### 修改index.js文件
 
-```js
+```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-ReactDOM.render(<div>Hello React</div>, document.getElementById("root"));
+ReactDOM.render(
+    <div>Hello React</div>,
+    document.getElementById("root")
+ );
 ```
 
 ### Api
 
 ```jsx
-ReactDOM.render(); // 把虚拟dom生成真实dom,插入到页面容器中
-ReactDOM.render(); // 参数：jsx(虚拟dom)、页面容器、回调函数：把虚拟dom生成真实dom插入到页面容器中之后立刻调用
+ReactDOM.render() // 把虚拟dom生成真实dom,插入到页面容器中
+ReactDOM.render() // 参数：jsx(虚拟dom)、页面容器、回调函数：把虚拟dom生成真实dom插入到页面容器中之后立刻调用
 ```
 
-### JSX 语法
+### JSX语法
 
-```
+```jsx
 可以把jsx称为虚拟dom，但是不能把虚拟dom称为jsx
 
 jsx是js+html的混合语句
@@ -62,7 +65,7 @@ jsx是React.createElement()的语法糖
 
 ##### 语法规范
 
-```
+```jsx
 1. class要写成classNme
 2. 只能有一个根节点
 3. 标签必须闭合
@@ -80,7 +83,7 @@ jsx是React.createElement()的语法糖
 1.this.setState({})
 
 2.this.setState(()=>{
- return{}
+	return{}
 })
 ```
 
@@ -88,29 +91,63 @@ jsx是React.createElement()的语法糖
 
 ```jsx
 1. 修改状态
-2. 回调函数
- 作用:获取最新状态
- 触发:dom更新后触发(状态修改并且视图更新后触发)
+2. 回调函数 
+	作用：获取最新状态
+	触发：dom更新后触发（状态修改并且视图更新后触发）
 ```
 
 ##### setState()到底是同步还是异步的？
 
 ```jsx
-setState有的时候同步, 有的时候异步, setState本身是同步的, 但会有异步的表现形式
+setState有的时候同步,有的时候异步,setState本身是同步的，但会有异步的表现形式
 在合成事件和生命周期中是异步的
 在原生事件和异步中是同步的
 ```
 
-##### 为什么在合成事件中要把 setState 设置成异步形式呢？
+##### 为什么在合成事件中要把setState设置成异步形式呢？
 
-```
+```jsx
 为了性能优化，减少不必要的渲染
 在同一个合成事件中，多次执行setState(),多个setState会存放在一个异步队列中，只触发最后一次，只render一次
 ```
 
 ### 通信方式
 
+```jsx
+1.父子传值：在父组件的子组件标签自定义属性，子组件通过props接收，类组件通过this.props， 函数组   件通过props接收
+
+2.子父传值：父组件给子组件传递一个函数，子组件通过props接收并触发，传递参数给父组件
+
+3.上下文传参(context传参)
+	1.创建上下文对象
+    	上下文对象提供了两个组件
+        	Provider:提供者
+            Consumer:接收者
 ```
-父子传值：在父组件的子组件标签自定义属性，子组件通过props接收，类组件通过this.props， 函数组件通过props接收
-子父传值：父组件给子组件传递一个函数，子组件通过props接收并触发，传递参数给父组件
+
+### React.Fragment
+
+```jsx
+<React.Fragment></React.Fragment>
+相当于vue中的template 可以包裹标签,但是不占结构
 ```
+
+### 状态提升
+
+```jsx
+将多个平行组件或者跨组件中共享的数据提升到共同的父组件或者祖父组件中进行集中管理
+```
+
+### 默认props
+
+```
+1.方法一:user.defaultProps = {}
+2.方法二:static defaultProps = {}
+```
+
+### 模拟计算属性
+
+```
+
+```
+
