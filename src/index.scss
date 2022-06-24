@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.todo {
+  width: 600px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.header {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  input {
+    width: 580px;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  ul {
+    width: 580px;
+    border: 1px solid #ccc;
+    // 第一个li取消边框
+    li:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.item {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  justify-content: space-between;
+  input {
+    margin: 0 10px;
+  }
+  p {
+    width: 50px;
+    height: 25px;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgb(255, 6, 31);
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  height: 45px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .left,
+  .right {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    margin: 0 20px;
+  }
+  p {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(255, 6, 31);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin: 0 15px;
+  }
+}
