@@ -1,0 +1,110 @@
+.zf {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con1 {
+  width: 420px;
+  height: 370px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dd1h {
+  width: 100%;
+  height: 55px;
+  display: flex;
+}
+.dd1h div {
+  width: 50%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.d1d1 {
+  background-color: rgb(50, 189, 254);
+  color: #fff;
+}
+
+.d2h {
+  width: 100%;
+  height: 110px;
+}
+.dd2h ul {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dd2h ul li {
+  width: 75px;
+  height: 65px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dd2h ul li p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dd3h {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.dd3h input[type="radio"] {
+  width: 25px;
+  height: 25px;
+}
+.d3h input[type="text"] {
+  width: 280px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.dd4h {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.dd4h p {
+  width: 166px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+  align-items: center;
+  border-radius: 5px;
+}
+.dd5h {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dd5h p:nth-child(2) {
+  margin-right: 20px;
+}

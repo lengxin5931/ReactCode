@@ -1,0 +1,125 @@
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.con {
+  width: 800px;
+  height: 510px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.con-con {
+  width: 98%;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(50, 189, 254);
+}
+.d2h {
+  width: 100%;
+  height: 45px;
+  display: flex;
+}
+.d2h div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.d2h div h4 {
+  margin: 5px 10px;
+}
+span {
+  color: red;
+}
+
+/* .d2h div h4 {
+  margin: 5px 10px;
+} */
+.d2h div input {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin: 0 10px;
+  padding-left: 10px;
+}
+.d3h {
+  margin: 20px 10px;
+}
+#nan,
+#nv {
+  margin: 10px 10px;
+}
+.d6h {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.d6h .right,
+.left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.d6h .left p {
+  color: rgb(52, 110, 200);
+}
+.close {
+  width: 65px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(244, 244, 244);
+  background-color: rgb(244, 244, 244);
+  color: rgb(154, 154, 154);
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 0 15px;
+}
+.ok {
+  width: 65px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(137, 200, 233);
+  border-radius: 5px;
+  font-size: 12px;
+}
+.d4h ul {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.d4h li {
+  width: 30%;
+  height: 25%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: rgb(50, 189, 254);
+}
