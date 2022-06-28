@@ -145,9 +145,104 @@ setState有的时候同步,有的时候异步,setState本身是同步的，但�
 2.方法二:static defaultProps = {}
 ```
 
-### 模拟计算属性
+### React 生命周期(旧)
 
+```markdown
+(初始化阶段)实例期
+     constructor
+     UNSAFE_componentWillMount
+     render
+     componentDidMount
+
+(更新阶段)运行期(存在期)
+     UNSAFE_componentWillReceiveProps
+     shouldComponentUpdate 控制组件是否更新
+     UNSAFE_componentWillUpdate
+     render
+     componentDidUpdate
+              
+(销毁阶段)毁期  
+     componentWillUnmount  
+     
 ```
 
+
+### React路由
+
+##### 安装命令
+
+```jsx
+npm install react-router-dom@5.0 --force
 ```
 
+#####  路由提供的组件
+
+```react
+BrowserRouter  历史模式
+HashRouter  hash模式
+Link  跳转的路由组件
+NavLink 跳转的有高亮的路由组件 （可以自己指定高亮类名，默认active，指定：activeClassName）
+Route 匹配对应路径显示对象路由的路由组件
+Redirect 重定向
+Switch  匹配唯一路由
+
+import { BrowserRouter,HashRouter，Route，Link，Switch } from "react-router-dom";
+// 历史模式：BrowserRouter
+// hash模式：HashRouter
+
+<Route path="/home" component={Home}></Route>
+// 匹配对应路径显示对象路由的路由组件
+
+<Link to="/home"}>首页</Link>
+// 跳转的路由组件
+
+<NavLink to="/home" activeClassName="xxxxx"></NavLink>
+// 跳转的有高亮的路由组件 （可以自己指定高亮类名，默认active，指定：activeClassName）
+
+<Route path="/" exact component={Login}></Route>
+// exact 精准匹配
+
+<Redirect from="/" exact to="/Login"></Redirect>
+// 重定向 
+
+<Switch>
+    <Route></Route>
+    <Redirect></Redirect>
+</Switch>
+// 匹配唯一路由
+```
+
+#####  路由二级嵌套
+
+```jsx
+<Switch>
+     <Route path='/home/child1' component={Child1} />
+     <Route path='/home/child2' component={Child2} />
+     <Redirect from='/home' exact to='/home/child1' />
+</Switch>
+```
+
+##### 路由匹配规则
+
+1. 包含匹配（模糊匹配） to(地址栏)里包含path的内容
+
+   ​	设置精准匹配  exact
+
+   ​	`
+   ​	<Route path='/' exact component={Login}></Route>
+   ​	`
+
+   ​	但是嵌套路由中不使用exact，因为嵌套路由会匹配不到
+
+2. 路由从上往下依次匹配，找到匹配的不停止，一直到最后
+
+   ​	用Switch组件包起来Route，设置唯一路由匹配，从上往下依次匹配，找到匹配的，不在往下接着匹配 
+
+##### 路由跳转
+
+```react
+// 声明式：<Link></Link> <NavLink></NavLink>
+// 编程式：this.props.history.push()
+```
+
+ 
